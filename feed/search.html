@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed - Pictroid</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../dist/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="nav-container">
+  </div>
+
+    <div class="row w-100 mt-1 m-0">
+      <div class="container-fluid col-10 mt-6 d-flex justify-content-end">
+        <div class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="sortDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort by
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+            <li><a class="dropdown-item" href="#" data-sort="desc">Newest</a></li>
+            <li><a class="dropdown-item" href="#" data-sort="asc">Oldest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-fluid col-10 mt-4">
+        <div class="row justify-content-center text-center gap-2" id="posts-container">
+          <div class="d-flex justify-content-center">
+            <span>Loading...</span>
+            <div class="spinner-border" role="status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Placeholdername</h5>
+          </div>
+          <div class="modal-body text-center" id="postModalBody">
+           
+          </div>
+          <div class="modal-footer d-flex justify-content-center flex-column">
+            <form class="d-flex flex-column">
+              <label for="comment">Comment</label>
+              <textarea
+              class="form-control"
+              rows="3"
+              placeholder="Write your comment"
+            ></textarea>
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            </form>
+            <div class="bg-light p-1" id="comment-container">
+              <p>There seems to be no comments for this post</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script type="module" src="/js/html-functions/searchPosts.js"></script>
+  <script type="module" src="/js/html-functions/createNav.js"></script>
+  <script type="module" src="/js/functions/sortButtons.js"></script>
+
+
+
+</html>

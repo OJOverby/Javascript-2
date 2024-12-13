@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Pictroid</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../dist/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="nav-container">
+
+  </div>
+
+    <div class="container-fluid mt-6">
+      <div class="row" id="profile-container">
+       
+      </div>
+    </div>
+
+    <div class="container-fluid col-10 mt-4 mb-4">
+      <div class="row justify-content-center text-center gap-2" id="posts-container">
+        <div class="d-flex justify-content-center">
+          <span>Loading...</span>
+          <div class="spinner-border" role="status"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit profile</h5>
+          </div>
+          <div class="modal-body">
+            <form id="updateProfileForm">
+              <label for="avatar">Avatar</label>
+              <input
+                  type="text"
+                  id="avatar"
+                  class="form-control"
+                  placeholder="Enter link to your avatar"
+                  minlength="5"
+                  required
+              />
+
+              <label for="avatarAlt">Avatar image text</label>
+              <input
+                  type="text"
+                  id="avatarAlt"
+                  class="form-control"
+                  placeholder="Avatar text"
+                  minlength="5"
+                  required
+              />
+
+              <label for="bio">Bio text</label>
+              <input
+                  type="text"
+                  id="bio"
+                  class="form-control"
+                  placeholder="Bio text"
+                  minlength="5"
+                  required
+              />
+              
+       
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveUpdatesButton">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="postUpdateModal" tabindex="-1" aria-labelledby="updatePostLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Post</h5>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex flex-column" id="update-form">
+              <div class="mb-1">
+                <label for="postTitle" class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateTitle"
+                  placeholder="Enter your post title"
+                  aria-label="Post Title"
+                />
+              </div>
+              <div class="mb-1">
+                <label for="updateInfo" class="form-label">Post text</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Write your post"
+                ></textarea>
+              </div>
+              <div class="mb-1">
+                <label for="updateURL" class="form-label">Image url</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="updateURL"
+                  placeholder="Enter image URL"
+                  aria-label="Image URL"
+                />
+              </div>
+              <div class="mb-1">
+                <label for="updateAlt" class="form-label">Alternative text</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateAlt"
+                  placeholder="Enter image text"
+                  aria-label="Image Alt"
+                />
+              </div>
+              <div class="mb-1">
+                <label for="tags" class="form-label">Tags</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateTags"
+                  placeholder="Enter tags separated by commas"
+                  aria-label="Hashtags"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="savePostUpdateButton">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="/js/html-functions/createProfile.js"></script>
+  <script type="module" src="/js/html-functions/createNav.js"></script>
+  <script type="module" src="/js/html-functions/renderMyPosts.js"></script>
+  <script type="module" src="/js/functions/handlePost.js"></script>
+
+</html>
