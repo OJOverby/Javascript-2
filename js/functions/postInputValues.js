@@ -16,7 +16,7 @@ export async function postInputValues (postID) {
     const saveUpdateButton = document.getElementById("savePostUpdateButton");
 
     saveUpdateButton.onclick = async () => {
-        const title = document.getElementById('updateTitle').value;
+        const title = document.getElementById("updateTitle").value;
         const body = document.querySelector("#update-form textarea").value;
         const imgUrl = document.getElementById("updateURL").value;
         const imgAlt = document.getElementById("updateAlt").value

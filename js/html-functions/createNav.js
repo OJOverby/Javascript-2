@@ -42,7 +42,7 @@ export function createNav() {
               >
             </li>
           </ul>
-          <form class="d-flex me-3" action="search.html" method="get">
+          <form class="d-flex me-3" action="/feed/search.html" method="get">
             <input
               class="form-control me-2"
               type="search"
@@ -51,7 +51,7 @@ export function createNav() {
               id="search-input"
               name="search"
             />
-            <button type="submit" id="search-button">SB</button>
+            <button type="submit" id="search-button" class="bg-transparent border-0"><i class="bi bi-search text-white"></i></button>
 
           </form>
           <ul class="navbar-nav">
@@ -130,8 +130,7 @@ export function createNav() {
 
     <div class="collapse fixed-top mt-5" id="searchCollapse">
       <div class="bg-lightblue p-3">
-        <form class="d-flex" action="search.html" method="get">
-
+        <form class="d-flex" action="/feed/search.html" method="get">
           <input
               class="form-control me-2"
               type="search"
