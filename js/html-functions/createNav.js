@@ -130,7 +130,8 @@ export function createNav() {
 
     <div class="collapse fixed-top mt-5" id="searchCollapse">
       <div class="bg-lightblue p-3">
-        <form class="d-flex">
+        <form class="d-flex" action="search.html" method="get">
+
           <input
               class="form-control me-2"
               type="search"
