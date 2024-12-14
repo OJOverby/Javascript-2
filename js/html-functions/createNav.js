@@ -132,11 +132,13 @@ export function createNav() {
       <div class="bg-lightblue p-3">
         <form class="d-flex">
           <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id="search-input"
+              name="search"
+            />
         </form>
       </div>
     </div>
