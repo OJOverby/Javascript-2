@@ -30,15 +30,12 @@ export async function searchPosts(endpoint){
       <p>${post.body || 'No post text'}</p>
         <img class="img-fluid post-img" src="${post.media?.url || '../../images/placeholder.jpeg'}" alt="${post.media?.alt || 'Post Image'}" />
       <h5>${post.tags ? post.tags.map(tag => `<a href="tags.html?tag=${(tag)}">#${tag}`).join('  ') : ''}</a></h5>
-    </div>
-    <div>
-      <h2>
-        <i class="bi bi-hand-thumbs-up"></i>
-        <i class="bi bi-chat position-relative">
-            <span class="position-absolute top-50 start-50 translate-middle" id="commentCount">${post._count.comments || ''}</span>
-        </i>
-      </h2>
-    </div>
+        <div>
+          <i class="bi bi-chat position-relative">
+            <span id="commentCount">${post._count.comments+' comments' || 'No comments'}</span>
+          </i>
+        </div>
+      </div>
   `;
 
   postElement.dataset.id = post.id;

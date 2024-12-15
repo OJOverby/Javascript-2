@@ -35,9 +35,8 @@ export async function renderPosts(endpoint){
         <img class="img-fluid post-img" src="${post.media?.url || '../../images/placeholder.jpeg'}" alt="${post.media?.alt || 'Post Image'}" />
       <h5>${post.tags ? post.tags.map(tag => `<a href="tags.html?tag=${(tag)}">#${tag}`).join('  ') : ''}</a></h5>
       <div>
-        <i class="bi bi-chat position-relative">
+        <i class="bi bi-chat position-relative"></i>
             <span id="commentCount">${post._count.comments+' comments' || 'No comments'}</span>
-        </i>
       </div>
     </div>
   `;

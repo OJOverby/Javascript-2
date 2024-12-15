@@ -4,7 +4,6 @@ import { save } from "./save.js";
 
 export async function profileInputValues (profileName) {
     const profile = await fetchUser(profileName);
-    console.log("PofileName:"+profileName)
     console.log(profile);
 
     document.getElementById('avatar').value = profile.data.avatar.url || '';

@@ -14,7 +14,7 @@ export function createNav() {
   const navContainer = document.querySelector("#nav-container");
   const profile = load("profile");
   navContainer.innerHTML = `
-          <nav class="navbar navbar-expand-md bg-lightblue fixed-top border-bottom-red">
+          <nav class="navbar navbar-expand-md bg-customcolor fixed-top border-bottom-red">
       <div class="container-fluid">
         <a class="navbar-brand" href="../feed/index.html"
           >Noroff Social</a
@@ -69,7 +69,7 @@ export function createNav() {
     </nav>
 
     <div class="collapse fixed-top mt-5" id="postCollapse">
-      <div class="bg-lightblue p-3">
+      <div class="bg-customcolor p-3">
         <div class="row justify-content-center">
           <div class="col-lg-6">
            <form class="d-flex flex-column" id="post-form">
@@ -129,7 +129,7 @@ export function createNav() {
     </div>
 
     <div class="collapse fixed-top mt-5" id="searchCollapse">
-      <div class="bg-lightblue p-3">
+      <div class="bg-customcolor p-3">
         <form class="d-flex" action="/feed/search.html" method="get">
           <input
               class="form-control me-2"
@@ -144,7 +144,7 @@ export function createNav() {
     </div>
   
 
-    <nav class="navbar fixed-bottom bg-lightblue d-md-none">
+    <nav class="navbar fixed-bottom bg-customcolor d-md-none">
       <div class="container-fluid d-flex justify-content-around">
         <a class="nav-link text-center" href="../feed/index.html">
           <i class="bi bi-house-fill"></i><br />Home

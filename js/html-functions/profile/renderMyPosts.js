@@ -23,7 +23,7 @@ export async function renderMyPosts(){
       <h3>${post.title || 'Untitled post'}</h3>
       <p>${post.body || 'No post text'}</p>
         <img class="img-fluid post-img" src="${post.media?.url || '../../images/placeholder.jpeg'}" alt="${post.media?.alt || 'Post Image'}" />
-      <h5>${post.tags ? post.tags.map(tag => `<a href="index.html?tag=${(tag)}">#${tag}`).join('  ') : ''}</a></h5>
+      <h5>${post.tags ? post.tags.map(tag => `<a href="/feed/tags.html?tag=${(tag)}">#${tag}`).join('  ') : ''}</a></h5>
       <button class="btn btn-primary mb-3 modal-button"  data-id="${post.id}" data-bs-toggle="modal" data-bs-target="#postUpdateModal">Edit Post</button>
       <button class="btn btn-danger mb-3 delete-button" data-id="${post.id}">Delete Post</button>
 
