@@ -1,14 +1,13 @@
 import { fetchPosts } from "../../api-calls/feed/fetchPosts.js";
 import { renderPost } from "./renderPost.js";
-const endpoint = "/social/posts?_tag=";
 
-export async function tagPosts(endpoint){
+export async function tagPosts(){
+  const endpoint = "/social/posts?_tag=";
   const params = new URLSearchParams(window.location.search);
   const tagTerm = params.get('tag');
 
   const posts = await fetchPosts(endpoint+tagTerm);
   const container = document.querySelector("#posts-container");
-  console.log(posts);
 
   container.innerHTML = "";
   
@@ -46,4 +45,4 @@ export async function tagPosts(endpoint){
 })
 }
 
-tagPosts(endpoint);
+tagPosts();
