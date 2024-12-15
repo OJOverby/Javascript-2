@@ -23,13 +23,10 @@ export async function postInputValues (postID) {
     
         try {
           const updatedPost = await updatePost(postID, title, body, imgUrl, imgAlt);
-          console.log("Profile updated successfully:", updatedPost);
           const post = await fetchPosts(endpoint);
-    
           window.location.reload()
 
         } catch (error) {
-          console.error("Error updating profile:", error.message);
         }
       };
 }

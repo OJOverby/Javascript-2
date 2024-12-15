@@ -1,6 +1,5 @@
 import { loginUser } from "../api-calls/loginUser.js";
 
-
 const form = document.querySelector("#loginForm");
 
 export async function handleLogin(event) {
