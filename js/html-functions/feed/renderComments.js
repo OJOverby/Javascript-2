@@ -1,5 +1,5 @@
 
-import { fetchComments } from "../api-calls/fetchComments.js";
+import { fetchComments } from "../../api-calls/feed/fetchComments.js";
 
 export async function renderComments(id){
   const comments = await fetchComments(id);

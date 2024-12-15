@@ -1,5 +1,5 @@
 
-import { fetchPosts } from "./fetchPosts.js";
+import { fetchPosts } from "../feed/fetchPosts.js";
 
 
 export async function fetchUserPosts (userName) {

@@ -1,6 +1,6 @@
-import { BASE_API } from "../api/api.js";
-import { load } from "../functions/load.js";
-import { API_KEY } from "../api/api-key.js";
+import { BASE_API } from "../../api/api.js";
+import { load } from "../../functions/load.js";
+import { API_KEY } from "../../api/api-key.js";
 
 export async function deletePost (id) {
   const response = await fetch(BASE_API + "/social/posts/"+id, {

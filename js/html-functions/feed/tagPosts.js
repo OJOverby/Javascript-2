@@ -1,4 +1,4 @@
-import { fetchPosts } from "../api-calls/fetchPosts.js";
+import { fetchPosts } from "../../api-calls/feed/fetchPosts.js";
 import { renderPost } from "./renderPost.js";
 const endpoint = "/social/posts?_tag=";
 

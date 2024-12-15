@@ -1,4 +1,4 @@
-import { renderPosts } from "../html-functions/renderPosts.js";
+import { renderPosts } from "../html-functions/feed/renderPosts.js";
 
 export async function sortButtons(){
     document.querySelectorAll(".dropdown-item").forEach((item) => {

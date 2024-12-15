@@ -59,7 +59,7 @@
       <div class="modal-dialog">
         <div class="modal-content bg-light">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Placeholdername</h5>
+            <h5 class="modal-title" id="modal-title">Placeholdername</h5>
           </div>
           <div class="modal-body text-center" id="postModalBody">
            
@@ -72,7 +72,7 @@
               rows="3"
               placeholder="Write your comment"
             ></textarea>
-            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            <button type="submit" class="btn btn-primary mt-2" id="comment-button">Submit</button>
             </form>
             <div class="bg-light p-1" id="comment-container">
               <p>There seems to be no comments for this post</p>
@@ -84,7 +84,7 @@
 
   </body>
 
-  <script type="module" src="/js/html-functions/searchPosts.js"></script>
+  <script type="module" src="/js/html-functions/feed/searchPosts.js"></script>
   <script type="module" src="/js/html-functions/createNav.js"></script>
   <script type="module" src="/js/functions/sortButtons.js"></script>
 

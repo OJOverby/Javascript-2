@@ -1,4 +1,6 @@
-import { fetchUser } from "../api-calls/fetchUser.js";
+import { fetchUser } from "../../api-calls/fetchUser.js";
+import { checkIfFollows } from "../../api-calls/profile/checkIfFollow.js";
+import { followClick } from "../../functions/followClick.js";
 
 export async function createUserProfile () {
     const container = document.querySelector("#profile-container");
@@ -25,7 +27,7 @@ export async function createUserProfile () {
                 ${profile.data.bio || "This user haven't written a bio yet"}
               </p>
               <div class="row text-center">
-                    <button class="btn btn-primary mb-3">Follow</button>
+                    <button class="btn btn-primary mb-3" id="follow-button">Follow</button>
                 <div class="col-6">
                   <h5>${profile.data._count.followers}</h5>
                   <p>Followers</p>
@@ -39,6 +41,8 @@ export async function createUserProfile () {
           </div>
         </div>
     `
-}
+    followClick(id);
+    checkIfFollows(id);
 
+}
 createUserProfile();

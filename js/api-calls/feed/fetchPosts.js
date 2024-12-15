@@ -1,6 +1,6 @@
-import { BASE_API } from "../api/api.js";
-import { API_KEY } from "../api/api-key.js"
-import { load } from "../functions/load.js";
+import { BASE_API } from "../../api/api.js";
+import { API_KEY } from "../../api/api-key.js"
+import { load } from "../../functions/load.js";
 const endpoint = "/social/posts?_author=true";
 
 

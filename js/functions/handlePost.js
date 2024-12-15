@@ -31,10 +31,8 @@ export function postListener() {
       try {
         const postData = await handlePost();
         const response = await createPost(postData);
-        console.log("Post created successfully:", response);
         form.reset();
       } catch (error) {
-        console.error("Error creating post:", error);
       }
     });
   }

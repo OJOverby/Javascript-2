@@ -1,9 +1,6 @@
 
-import { load } from "../functions/load.js";
-import { fetchPosts } from "./fetchPosts.js";
-
-
-
+import { load } from "../../functions/load.js";
+import { fetchPosts } from "../feed/fetchPosts.js";
 
 
 export async function fetchMyPosts () {

@@ -1,6 +1,6 @@
-import { load } from "../functions/load.js";
-import { postInputValues } from "../functions/postInputValues.js";
-import { profileInputValues } from "../functions/profileInputValues.js";
+import { load } from "../../functions/load.js";
+import { postInputValues } from "../../functions/postInputValues.js";
+import { profileInputValues } from "../../functions/profileInputValues.js";
 
 export function createProfile () {
     const container = document.querySelector("#profile-container");

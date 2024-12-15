@@ -1,6 +1,6 @@
-import { fetchMyPosts } from "../api-calls/fetchMyPosts.js";
-import { postInputValues } from "../functions/postInputValues.js";
-import { deletePost } from "../api-calls/deletePost.js";
+import { fetchMyPosts } from "../../api-calls/profile/fetchMyPosts.js";
+import { postInputValues } from "../../functions/postInputValues.js";
+import { deletePost } from "../../api-calls/profile/deletePost.js";
 
 
 export async function renderMyPosts(){

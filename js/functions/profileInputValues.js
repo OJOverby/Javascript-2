@@ -1,5 +1,5 @@
 import { fetchUser } from "../api-calls/fetchUser.js";
-import { updateUser } from "../api-calls/updateUser.js";
+import { updateUser } from "../api-calls/profile/updateUser.js";
 import { save } from "./save.js";
 
 export async function profileInputValues (profileName) {

@@ -1,5 +1,5 @@
-import { fetchPosts } from "../api-calls/fetchPosts.js";
-import { updatePost } from "../api-calls/updatePost.js";
+import { fetchPosts } from "../api-calls/feed/fetchPosts.js";
+import { updatePost } from "../api-calls/profile/updatePost.js";
 
 export async function postInputValues (postID) {
  

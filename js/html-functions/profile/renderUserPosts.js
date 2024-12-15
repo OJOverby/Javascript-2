@@ -1,4 +1,4 @@
-import { fetchUserPosts } from "../api-calls/fetchUserPosts.js";
+import { fetchUserPosts } from "../../api-calls/profile/fetchUserPosts.js";
 
 export async function renderUserPosts(){
 
@@ -24,7 +24,7 @@ export async function renderUserPosts(){
       <h3>${post.title || 'Untitled post'}</h3>
       <p>${post.body || 'No post text'}</p>
         <img class="img-fluid post-img" src="${post.media?.url || '../../images/placeholder.jpeg'}" alt="${post.media?.alt || 'Post Image'}" />
-      <h5>${post.tags ? post.tags.map(tag => `<a href="index.html?tag=${(tag)}">#${tag}`).join('  ') : ''}</a></h5>
+      <h5>${post.tags ? post.tags.map(tag => `<a href="/feed/tags.html?tag=${(tag)}">#${tag}`).join('  ') : ''}</a></h5>
   `;
 
   container.appendChild(postElement);

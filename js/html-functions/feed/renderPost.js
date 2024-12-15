@@ -1,12 +1,14 @@
-import { fetchPosts } from "../api-calls/fetchPosts.js";
-import { fetchComments } from "../api-calls/fetchComments.js";
+import { fetchPosts } from "../../api-calls/feed/fetchPosts.js";
+import { fetchComments } from "../../api-calls/feed/fetchComments.js";
 import { renderComments } from "./renderComments.js";
-import { commentOnPost } from "../api-calls/commentOnPost.js";
+import { commentOnPost } from "../../api-calls/feed/commentOnPost.js";
 
-export async function renderPost(postID){
+export async function renderPost(postID, postAuthor){
 const endpoint = "/social/posts/"+postID;
   const post = await fetchPosts(endpoint);
+  const postHeader = document.querySelector("#modal-title");
   const container = document.querySelector("#postModalBody");
+  postHeader.innerHTML = postAuthor;
   container.innerHTML = "";
   console.log(post)
   
