@@ -17,7 +17,6 @@ export async function renderComments(id){
     );
     commentElement.innerHTML = `
       <h5 class="ms-1">${comment.author.name || 'Unknown User'}</h5>
-      <i>${comment.created}</i>
       <p class="mt-1">${comment.body || 'No post text'}</p>
   `;
   container.appendChild(commentElement);

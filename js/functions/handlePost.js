@@ -10,11 +10,13 @@ export async function handlePost(event) {
     const imageURL = document.querySelector("#imageURL").value;
     const imageAlt = document.querySelector("#imageAlt").value;
     const tags = document.querySelector("#tags").value;
+    const tagsArray = tags.split(",").map(tag => tag.trim());
+
 
     const postData = {
         "title": postTitle,
         "body": postBody,
-        "tags": [tags],
+        "tags": tagsArray,
         "media": {
             "url": imageURL,
             "alt": imageAlt,
