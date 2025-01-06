@@ -1,0 +1,15 @@
+.background-container {
+    background-image: url("../../images/loginbackground.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .post-img {
+    width: 60%;
+    height: auto;
+  }
+  .mt-6 {
+    margin-top: ($spacer * 6) !important;
+  }
